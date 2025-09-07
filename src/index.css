@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@font-face {
+    font-family: 'Vazirmatn-Light';
+    src: url('./assets/fonts/Vazirmatn-Light.ttf')format('truetype');
+}
+@font-face {
+    font-family: 'Vazirmatn-Medium';
+    src: url('./assets/fonts/Vazirmatn-Medium.ttf')format('truetype');
+}
+.vazir-light{
+    font-family: Vazirmatn-Light;
+}
+.vazir-medium{
+    font-family: Vazirmatn-Medium;
+}
