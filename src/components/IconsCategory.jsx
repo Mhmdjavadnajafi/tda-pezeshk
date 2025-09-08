@@ -2,7 +2,7 @@ import React from "react";
 import Doctor from '../assets/images/Group 3447 (2).png';
 import Nurse from '../assets/images/Group 3446 (2).png';
 import Medicine from '../assets/images/Group 3448.png';
-import Test from '../assets/images/Group 3528.png';
+import Test from '../assets/images/para.png';
 const IconsCategory = ()=>{
     return(
         <div className="grid gap-1 grid-cols-8 mt-1 w-[90%] mx-auto">

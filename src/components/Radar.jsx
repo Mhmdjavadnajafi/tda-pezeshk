@@ -16,7 +16,7 @@ export default function RadarCircle() {
         @keyframes radar {
           0%   { transform: scale(1); opacity: .6; }
           70%  { opacity: .15; }
-          100% { transform: scale(8); opacity: 0; }
+          100% { transform: scale(5); opacity: 0; }
         }
       `}</style>
         </div>

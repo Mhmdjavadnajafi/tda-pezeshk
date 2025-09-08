@@ -9,9 +9,9 @@ const LoginBox = ()=>{
         console.log(allow)
     },[allow])
     return(
-        <div className='w-full h-50 mt-5'>
+        <div className='w-full h-50 mt-10'>
             <div className='vazir-medium font-semibold text-lg'>ورود کاربر</div>
-            <div className='vazir-medium text-gray-400 mt-3 mb-2'>شماره همراه خود را وارد فرمایید</div>
+            <div className='vazir-medium text-gray-400 mt-5 mb-'>شماره همراه خود را وارد فرمایید</div>
             <InputNumber maxNumber={11} onBlur={(e)=>{
                if(e.target.value.length === 11){
                 setAllow(true)
@@ -19,7 +19,14 @@ const LoginBox = ()=>{
                 setAllow(false)
                }
             }} placeholder={'شماره همراه'}></InputNumber>
-            <ButtonSubmit onClick={navigate('/register')} bg={'bg-gray-200'} borderColor={'border-gray-500'} color={'text-gray-500'} text={"ورود"}></ButtonSubmit>
+            <ButtonSubmit
+                onClick={() => navigate('/register')}
+                bg={allow ? 'bg-[#006ECF]' : 'bg-gray-200'}
+                borderColor={'border-gray-500'}
+                color={allow ? 'text-white' : 'text-gray-500'}
+                text={"ورود"}
+            />
+
         </div>
     )
 }

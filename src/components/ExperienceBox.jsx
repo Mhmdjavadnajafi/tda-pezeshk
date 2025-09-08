@@ -2,9 +2,9 @@ import React from "react";
 import { FaBookMedical } from "react-icons/fa";
 const ExperienceBox = ()=>{
     return(
-        <div className="w-[70px] mt-1 bg-blue-200 text-blue-500 gap-2 rounded h-6 flex flex-row-reverse items-center justify-center py-4">
-            <FaBookMedical />
-            <div className="vazir-medium relative top-[2px]" dir="ltr">+3500</div>
+        <div className="w-[70px] mt-1 text-[#006ECF] bg-[#F2F2F2] rounded h-[40px] flex flex-col items-center justify-center py-4">
+            <div className="vazir-medium text-[14px] text-bold">+1000</div>
+            <div className="vazir-medium text-[10px]">مشاوره موفق</div>
         </div>
     )
 }

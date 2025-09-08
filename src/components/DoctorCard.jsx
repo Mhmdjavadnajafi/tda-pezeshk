@@ -3,21 +3,29 @@ import RadarCircle from "./Radar";
 import DoctorOne from '../assets/images/پزشک زن.jpg'
 import StarBox from "./StarBox";
 import ExperienceBox from "./ExperienceBox";
-const DoctorCard = ({ profileImg, profileStar, profileExperience }) => {
+import DoctorName from "./DoctorName";
+import DoctorExp from "./expertiseDoctor";
+import StartCounseling from "./StartCounseling";
+import Communication from "./communication";
+const DoctorCard = ({ profileImg, profileStar, profileExperience,profileName,profileExp }) => {
     return (
-        <div className="h-[220px] w-[180px] rounded-xl flex items-center shadow bg-white">
-            <div className="flex w-[90%] gap-2 mx-auto px-5 items-center justify-center">
+        <div className="h-[290px] w-[200px] rounded-xl flex flex-col justify-center shadow bg-white">
+            <div className="flex w-[80%] gap-4 mx-auto px-5 items-center justify-center">
                 <div className="relative">
                     <RadarCircle />
                     <div className="w-[76px] h-[76px] border border-blue-400 rounded-full">
-                        <img className="h-[76px] rounded-full w-[76px]" src={DoctorOne}></img>
+                        <img className="h-[70px] rounded-full w-[70px]" src={DoctorOne}></img>
                     </div>
                 </div>
-                <div className="w-full flex flex-col items-center justify-start">
+                <div className="w-full flex-col items-end" dir="ltr">
                     <StarBox></StarBox>
                     <ExperienceBox></ExperienceBox>
                 </div>
             </div>
+            <DoctorName name={profileName}></DoctorName>
+            <DoctorExp exp={profileExp}></DoctorExp>
+            <Communication></Communication>
+            <StartCounseling></StartCounseling>
         </div>
     );
 };
