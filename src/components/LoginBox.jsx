@@ -1,33 +1,42 @@
-import React, { useEffect, useState } from 'react'
-import InputNumber from './InputNumberPhone';
-import ButtonSubmit from './ButtonSubmit';
-import { useNavigate } from 'react-router-dom';
-const LoginBox = ()=>{
-    const[allow,setAllow]=useState(false)
-      const navigate = useNavigate();
-    useEffect(()=>{
-        console.log(allow)
-    },[allow])
-    return(
+import React, { useState } from 'react'
+import InputNumber from './InputNumberPhone'
+import ButtonSubmit from './ButtonSubmit'
+import { useNavigate } from 'react-router-dom'
+
+const LoginBox = () => {
+    const [allow, setAllow] = useState(false)
+    const navigate = useNavigate()
+
+    return (
         <div className='w-full h-50 mt-10'>
-            <div className='vazir-medium font-semibold text-lg'>ورود کاربر</div>
-            <div className='vazir-medium text-gray-400 mt-5 mb-'>شماره همراه خود را وارد فرمایید</div>
-            <InputNumber maxNumber={11} onBlur={(e)=>{
-               if(e.target.value.length === 11){
-                setAllow(true)
-               }else{
-                setAllow(false)
-               }
-            }} placeholder={'شماره همراه'}></InputNumber>
+            <div className='vazir-medium font-semibold text-lg text-[18px]'>ورود کاربر</div>
+            <div className='vazir-medium text-gray-400 mt-5'>
+                شماره همراه خود را وارد فرمایید
+            </div>
+
+            <InputNumber
+                placeholder="شماره همراه"
+                maxNumber={11}
+                onChange={(val) => {
+                    if (val.length === 11) {
+                        setAllow(true)
+                    } else {
+                        setAllow(false)
+                    }
+                }}
+            />
+
             <ButtonSubmit
-                onClick={() => navigate('/register')}
+                onClick={() => {
+                    if (allow) navigate('/register')
+                }}
                 bg={allow ? 'bg-[#006ECF]' : 'bg-gray-200'}
                 borderColor={'border-gray-500'}
                 color={allow ? 'text-white' : 'text-gray-500'}
                 text={"ورود"}
             />
-
         </div>
     )
 }
-export default LoginBox;
+
+export default LoginBox

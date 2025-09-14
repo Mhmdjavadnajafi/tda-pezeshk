@@ -1,5 +1,5 @@
 import React from "react";
-import requestImg from '../assets/images/Group 3452.png'
+import requestImg from '../assets/images/Group 3452 (3).png'
 import { useNavigate } from "react-router-dom";
 const Registrationrequest = () => {
     const ToTest = useNavigate()

@@ -7,7 +7,7 @@ const DiseasesContainer = () => {
     return (
        <div>
             <HeaderDiseases></HeaderDiseases>
-            <div className='grid grid-cols-10 gap-1 w-[90%] mx-auto mt-5'>
+            <div className='w-[90%] mx-auto grid grid-cols-10 gap-3 mt-5'>
                 <Disease src={Rectangle} name={'زگیل تناسلی'}></Disease>
                 <Disease src={Rectangle} name={'تخمدان'}></Disease>
                 <Disease src={Rectangle} name={'کیست مویی'}></Disease>

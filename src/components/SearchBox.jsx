@@ -1,11 +1,23 @@
 import React, { useState } from "react";
-const SearchBox = ()=>{
-    const[len,setLen]=useState(0)
-    return(
-        <div className="w-[85%] h-15 relative">
-            <input onChange={(e)=>setLen(e.target.value.length)} className="rounded-xl bg-gray-200 text-[1.2rem] px-5 vazir-medium text-gray-500 h-[100%] w-[100%]" placeholder="جستجو"></input>
-            <div className={`absolute top-[40%] text-[13px] left-[10%] vazir-medium text-bold text-[#00C0E8] ${len > 0?'opacity-0':"opacity-100"}`}> پزشک، تخصص، بیماری و ...</div>
-       </div>
-    )
-}
+
+const SearchBox = () => {
+    const [len, setLen] = useState(0);
+
+    return (
+        <div className="relative w-[85%] h-13">
+            <input
+                onChange={(e) => setLen(e.target.value.length)}
+                className="rounded-xl bg-gray-200 px-5 vazir-medium text-gray-500 h-[100%] w-[100%] text-right"
+                dir="rtl"
+            />
+            {len === 0 && (
+                <span className="absolute right-5 top-1/2 -translate-y-1/2 flex items-center gap-2 vazir-medium pointer-events-none">
+                    <span className="text-gray-500">جستجو</span>
+                    <span className="text-[#00C0E8] text-[12px]">پزشک، تخصص، بیماری و ...</span>
+                </span>
+            )}
+        </div>
+    );
+};
+
 export default SearchBox;

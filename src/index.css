@@ -1,15 +1,17 @@
 @import "tailwindcss";
 @font-face {
-    font-family: 'Vazirmatn-Light';
-    src: url('./assets/fonts/Vazirmatn-Light.ttf')format('truetype');
+    font-family: 'IranSansMedium';
+    src: url('./assets/fonts/Iran\ Sans.ttf')format('truetype');
+    font-weight: '';
 }
 @font-face {
-    font-family: 'Vazirmatn-Medium';
+    font-family: 'IranSansBold';
     src: url('./assets/fonts/Vazirmatn-Medium.ttf')format('truetype');
+    font-weight: bold;
 }
 .vazir-light{
-    font-family: Vazirmatn-Light;
+    font-family: IranSansMedium;
 }
 .vazir-medium{
-    font-family: Vazirmatn-Medium;
+    font-family: IranSansBold;
 }

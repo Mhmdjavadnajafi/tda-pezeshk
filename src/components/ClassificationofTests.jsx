@@ -14,7 +14,7 @@ const ClassificationOfTests = ()=>{
     const toGeneral = useNavigate()
     return(
         <div className="w-[90%] gap-2 mt-10 mx-auto grid grid-cols-12">
-            <Examination onClick={() => toGeneral('/generaltest')} imgSrc={General}></Examination>
+            <Examination onClick={() => toGeneral('/CheckTest')} imgSrc={General}></Examination>
             <Examination imgSrc={Hormonal}></Examination>
             <Examination imgSrc={liver}></Examination>
             <Examination imgSrc={Heart}></Examination>

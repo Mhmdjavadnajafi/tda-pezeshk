@@ -1,5 +1,5 @@
 import React from 'react'
-import TestImg from '../assets/images/Group 3529.png'
+import TestImg from '../assets/images/Group 3529 (4).png'
 const Test = ()=>{
     return(
         <div className='w-[90%] h-[108px] mx-auto mt-2 mb-[15px]'>

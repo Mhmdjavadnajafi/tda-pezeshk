@@ -10,7 +10,7 @@ import TestSelector from "../components/TestSelector";
 import Navbar from "../layouts/Navbar";
 const Content = ()=>{
     return(
-        <div className="w-[100%] mx-auto mt-10">
+        <div className="w-[100%] mx-auto mt-5">
             <HeaderContent></HeaderContent>
             <Categorys></Categorys>
             <Test></Test>

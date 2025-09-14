@@ -4,7 +4,7 @@ import React from "react";
 import DoctorCard from "./DoctorCard";
 const DoctorsCard = () => {
     return (
-        <div className="w-[90%] mx-auto mt-5">
+        <div className="w-[100%] mx-auto mt-5">
             <Swiper
                 spaceBetween={16} 
                 slidesPerView={"auto"} 
