@@ -59,7 +59,7 @@ const MyLocation = ({ setData }) => {
         <>
             {position && <Marker icon={userIcon} position={position} />}
             <span
-                className="absolute bottom-5 right-4 bg-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer shadow"
+                className="absolute z-1000 bottom-5 right-4 bg-white w-10 h-10 flex items-center justify-center rounded-full cursor-pointer shadow"
                 onClick={showMyLocation}
             >
                 <FaLocationCrosshairs className="text-xl" />

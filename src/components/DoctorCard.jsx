@@ -7,7 +7,9 @@ import DoctorName from "./DoctorName";
 import DoctorExp from "./expertiseDoctor";
 import StartCounseling from "./StartCounseling";
 import Communication from "./communication";
+import { useNavigate } from "react-router-dom";
 const DoctorCard = ({ profileImg, profileStar, profileExperience,profileName,profileExp }) => {
+    const navigate = useNavigate('')
     return (
         <div className="h-[290px] w-[200px] rounded-xl flex flex-col justify-center shadow bg-white">
             <div className="flex w-[80%] gap-4 mx-auto px-5 items-center justify-center">
@@ -25,7 +27,7 @@ const DoctorCard = ({ profileImg, profileStar, profileExperience,profileName,pro
             <DoctorName name={profileName}></DoctorName>
             <DoctorExp exp={profileExp}></DoctorExp>
             <Communication></Communication>
-            <StartCounseling></StartCounseling>
+            <StartCounseling onClick={()=>navigate('/doctor')}></StartCounseling>
         </div>
     );
 };

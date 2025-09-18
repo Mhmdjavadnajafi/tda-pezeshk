@@ -5,7 +5,7 @@ const ArrowProfile = ()=>{
     let navigate = useNavigate()
     return(
         <div className="text-gray-400 text-xl">
-            <MdOutlineArrowBackIos onClick={() => navigate('/edit')} />
+            <MdOutlineArrowBackIos onClick={() => navigate('/edit-profile')} />
         </div>
     )
 }

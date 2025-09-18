@@ -9,24 +9,27 @@ import ButtonSubmit from "../components/ButtonSubmit";
 import MessageLogin from "../components/messageLogin";
 import { useNavigate } from "react-router-dom";
 import Label from "../components/labelCard";
+import LoaderProvider from "./LoaderProvider";
 
 const Registration = ()=>{
     const navigate = useNavigate()
     return(
-        <div className="w-[90%] mx-auto mt-20">
-            <HeaderRegistration></HeaderRegistration>
-            <MessageRegistration numberPhone={'09216919291'}></MessageRegistration>
-            <InputNumber placeholder={'ورود کد'} maxNumber={6}></InputNumber>
-            <Timer></Timer>
-            <Label labelName={'نام و نام خانوادگی'}></Label>
-            <InputText placeholder={"مثال : اشکان حسنوندی"}></InputText>
-            <div className="mt-2">
-                <Label labelName={'کد ملی / اختیاری'}></Label>
-                <InputNumber placeholder={'4060405531'}></InputNumber>
+       <LoaderProvider>
+            <div className="w-[90%] mx-auto mt-20">
+                <HeaderRegistration></HeaderRegistration>
+                <MessageRegistration numberPhone={'09216919291'}></MessageRegistration>
+                <InputNumber placeholder={'ورود کد'} maxNumber={6}></InputNumber>
+                <Timer></Timer>
+                <Label labelName={'نام و نام خانوادگی'}></Label>
+                <InputText placeholder={"مثال : اشکان حسنوندی"}></InputText>
+                <div className="mt-2">
+                    <Label labelName={'کد ملی / اختیاری'}></Label>
+                    <InputNumber maxNumber={10} placeholder={'4060405531'}></InputNumber>
+                </div>
+                <ButtonSubmit onClick={() => navigate('/content')} text={'ورود'} color={"text-white"} bg="bg-blue-600" borderColor={'border-blue-500'}></ButtonSubmit>
+                <MessageLogin></MessageLogin>
             </div>
-            <ButtonSubmit onClick={()=>navigate('/content')} text={'ورود'} color={"text-white"} bg="bg-blue-600" borderColor={'border-blue-500'}></ButtonSubmit>
-            <MessageLogin></MessageLogin>
-        </div>
+       </LoaderProvider>
     )
 }
 export default Registration;

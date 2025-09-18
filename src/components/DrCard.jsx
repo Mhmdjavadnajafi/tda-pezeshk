@@ -13,7 +13,7 @@ import { CiVideoOn } from "react-icons/ci";
 import { FiTrello } from "react-icons/fi";
 import CmBox from "./cmBox";
 import StartCounselingCard from "./StartCounselingDrCard";
-const DrCard = ({ profileImg, profileName, profileExp }) => {
+const DrCard = ({ profileImg, profileName, profileExp,onClick }) => {
     return (
         <div className="py-4 w-[90%] mx-auto rounded-xl flex flex-col items-center justify-center shadow bg-white">
             <div className="flex w-[90%] mx-auto items-center justify-between">
@@ -40,7 +40,7 @@ const DrCard = ({ profileImg, profileName, profileExp }) => {
                     </div>
                 </div>
             </div>
-            <div className="w-[90%] mx-auto flex items-center justify-between mt-5 gap-x-1">
+            <div className="w-[90%] max-w-[500px] mx-auto flex justify-between mt-5 gap-2">
                 <CmBox icon={<BsTelephone />} text={"اورژانسی"} />
                 <CmBox icon={<BsTelephone />} text={"تلفنی"} />
                 <CmBox icon={<BsTelephone />} text={"متنی"} />
@@ -49,7 +49,9 @@ const DrCard = ({ profileImg, profileName, profileExp }) => {
             </div>
 
 
-            <StartCounselingCard/>
+
+
+            <StartCounselingCard onClick={onClick}/>
         </div>
     )
 }

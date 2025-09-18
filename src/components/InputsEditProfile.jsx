@@ -22,7 +22,7 @@ const InputsEditProfile = ({ onChange }) => {
                 <Label labelName="کد ملی" />
                 <InputNumber
                     placeholder="4060405531"
-                    maxNumber={11}
+                    maxNumber={10}
                     onChange={onChange} 
                 />
             </div>

@@ -8,18 +8,21 @@ import Expertises from "../components/expertises";
 import DiseasesContainer from "../components/diseases";
 import TestSelector from "../components/TestSelector";
 import Navbar from "../layouts/Navbar";
+import LoaderProviderMotion from "../pages/LoaderProvider";
 const Content = ()=>{
     return(
-        <div className="w-[100%] mx-auto mt-5">
-            <HeaderContent></HeaderContent>
-            <Categorys></Categorys>
-            <Test></Test>
-            <Expertises></Expertises>
-            <DoctorsBox></DoctorsBox>
-            <DiseasesContainer></DiseasesContainer>
-            <TestSelector></TestSelector>
-            <Navbar></Navbar>
-        </div>
+        <LoaderProviderMotion>
+            <div className="w-[100%] mx-auto mt-5">
+                <HeaderContent />
+                <Categorys />
+                <Test />
+                <Expertises />
+                <DoctorsBox />
+                <DiseasesContainer />
+                <TestSelector />
+                <Navbar />
+            </div>
+        </LoaderProviderMotion>
     )
 }
 export default Content

@@ -1,7 +1,7 @@
 import React from 'react'
-const SearchBtn = ()=>{
+const SearchBtn = ({onClick})=>{
     return(
-        <div className="h-13 bg-gray-200 w-13 rounded-xl flex items-center justify-center">
+        <div onClick={onClick} className="h-13 bg-gray-200 w-13 rounded-xl flex items-center justify-center">
             
         </div>
     )

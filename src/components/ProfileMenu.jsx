@@ -12,11 +12,11 @@ const ProfileMenu = () => {
     let navigate = useNavigate()
     return (
         <div className="w-[90%] mt-10 mx-auto">
-            <ProfileMenuItem colorIcon={'text-gray-400'} title={'افزایش موجودی'} iconMenu={<MdOutlineArrowBackIos />} icon={<LuDollarSign />}></ProfileMenuItem>
+            <ProfileMenuItem onClick={() => navigate('/Inventoryincrease')} colorIcon={'text-gray-400'} title={'افزایش موجودی'} iconMenu={<MdOutlineArrowBackIos />} icon={<LuDollarSign />}></ProfileMenuItem>
             <ProfileMenuItem colorIcon={'text-gray-400'} title={'پشتیبانی'} iconMenu={<MdOutlineArrowBackIos />} icon={<TbPhoneCall />}></ProfileMenuItem>
-            <ProfileMenuItem colorIcon={'text-gray-400'} title={'سوالات متداول'} iconMenu={<MdOutlineArrowBackIos />} icon={<FaRegFileLines />}></ProfileMenuItem>
+            <ProfileMenuItem onClick={() => navigate('/Frequentlyaskedquestions')} colorIcon={'text-gray-400'} title={'سوالات متداول'} iconMenu={<MdOutlineArrowBackIos />} icon={<FaRegFileLines />}></ProfileMenuItem>
             <ProfileMenuItem colorIcon={'text-gray-400'} title={'معرفی به دوستان'} iconMenu={<MdOutlineArrowBackIos />} icon={<FiGitBranch/>}></ProfileMenuItem>
-            <ProfileMenuItem colorIcon={'text-gray-400'} title={'درباره ما'} iconMenu={<MdOutlineArrowBackIos />} icon={<img src={TdaIcon} />}></ProfileMenuItem>
+            <ProfileMenuItem colorIcon={'text-gray-400'} onClick={() => navigate('/Rulesandregulations')} title={'قوانین و مقررات'} icon={<img src={TdaIcon} />}></ProfileMenuItem>
             <ProfileMenuItem colorIcon={'text-red-800'} onClick={()=>navigate('/')} title={'خروج'} icon={<LuLogOut />}></ProfileMenuItem>
         </div>
     )

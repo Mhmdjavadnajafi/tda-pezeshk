@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import InputNumber from './InputNumberPhone'
 import ButtonSubmit from './ButtonSubmit'
 import { useNavigate } from 'react-router-dom'
+import InputNumber from './InputNumberPhone'
 
 const LoginBox = () => {
     const [allow, setAllow] = useState(false)
+    const [hasError, setHasError] = useState(false)
     const navigate = useNavigate()
 
     return (
@@ -17,11 +18,15 @@ const LoginBox = () => {
             <InputNumber
                 placeholder="شماره همراه"
                 maxNumber={11}
+                hasError={hasError}
+                errorMessage="شماره باید دقیقاً 11 رقم باشد"
                 onChange={(val) => {
                     if (val.length === 11) {
                         setAllow(true)
+                        setHasError(false)
                     } else {
                         setAllow(false)
+                        setHasError(true)
                     }
                 }}
             />
