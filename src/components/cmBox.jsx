@@ -2,8 +2,7 @@ import React from "react";
 
 const CmBox = ({ icon, text }) => {
     return (
-        <div className="
-            flex-1 min-w-[50px] max-w-[90px] h-[35px] 
+        <div className="px-2 py-2 flex-1 
             bg-[#F2F2F2] rounded-sm flex justify-center items-center 
             gap-1 text-[12px] vazir-medium text-[#676767]
         ">

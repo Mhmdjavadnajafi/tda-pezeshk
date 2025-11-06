@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import Depatment from "./deparment";
 import CtScan from "../assets/images/ctscan.png"
 import MRI from "../assets/images/mri.png"
-import Sono from "../assets/images/سونوگرافی.png"
-import Striptest from '../assets/images/تست نواری.png'
-import Graphy from '../assets/images/گرافی.png'
-import Fizio from '../assets/images/فیزیوتراپی.png'
+import Sono from "../assets/images/sono.png"
+import Striptest from '../assets/images/Group 3533 (3).png'
+import Graphy from '../assets/images/graphy.png'
+import Fizio from '../assets/images/fizio.png'
 
 const ParaClicnicdepartment = () => {
     const navigate = useNavigate()

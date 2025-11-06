@@ -1,10 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import ToggleSelect from "./ToggleSelect";
 
-const YesNo = () => {
-    const [active, setActive] = useState("yes");
-
+const YesNo = ({ active, onChange }) => {
     const yesNoList = [
         { id: "no", text: "خیر" },
         { id: "yes", text: "بله" },
@@ -14,7 +11,7 @@ const YesNo = () => {
         <ToggleSelect
             items={yesNoList}
             active={active}
-            onChange={setActive}
+            onChange={onChange}
         />
     );
 };

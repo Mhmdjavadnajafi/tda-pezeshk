@@ -1,24 +1,48 @@
 import React from "react";
-import { FiUser } from "react-icons/fi";
-import { FiHome } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
-const Navbar = ()=>{
-    let navigate = useNavigate()
-    return(
-        <div className="fixed mx-auto bottom-0 left-0 flex items-center text-[14px] justify-between px-6 py-2 bg-white border border-top border-gray-300 w-[100%] shadow-md z-100">
-            <div className="flex flex-col items-center text-[#676767] vazir-medium text-center text-[14px] justify-center gap-2">
-                <FiHome className="text-[22px]" onClick={() => navigate('/content')} />
+import { FiUser, FiHome, FiClipboard } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+    return (
+        <div className="fixed mx-auto bottom-0 left-0 flex items-center text-[14px] justify-between px-6 py-2 bg-white border border-t border-gray-300 w-[100%] shadow-md z-100">
+
+            {/* Home */}
+            <NavLink
+                to="/content"
+                className={({ isActive }) =>
+                    `flex flex-col items-center vazir-medium text-center gap-2 ${isActive ? "text-blue-500" : "text-[#676767]"
+                    }`
+                }
+            >
+                <FiHome className="text-[22px]" />
                 <div>میز خدمت</div>
-            </div>
-            <div className="flex flex-col items-center text-[#676767] vazir-medium text-center text-[14px] justify-center gap-2">
-                <FiUser className="text-[22px]" />
+            </NavLink>
+
+            {/* Medical Records */}
+            <NavLink
+                to="/Medicalrecords"
+                className={({ isActive }) =>
+                    `flex flex-col items-center vazir-medium text-center gap-2 ${isActive ? "text-blue-500" : "text-[#676767]"
+                    }`
+                }
+            >
+                <FiClipboard className="text-[22px]" />
                 <div>پرونده پزشکی</div>
-            </div>
-            <div className="flex flex-col items-center text-[#676767] vazir-medium text-center text-[14px] justify-center gap-2">
-               <FiUser onClick={()=>navigate('/profile')} className="text-[22px]" />
+            </NavLink>
+
+            {/* Profile */}
+            <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                    `flex flex-col items-center vazir-medium text-center gap-2 ${isActive ? "text-blue-500" : "text-[#676767]"
+                    }`
+                }
+            >
+                <FiUser className="text-[22px]" />
                 <div>پروفایل کاربری</div>
-            </div>
+            </NavLink>
         </div>
-    )
-}
+    );
+};
+
 export default Navbar;

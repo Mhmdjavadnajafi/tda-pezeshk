@@ -1,5 +1,5 @@
 import RadarCircle from "./Radar"
-import DoctorOne from '../assets/images/پزشک زن.jpg'
+import DoctorOne from '../assets/images/womandr.jpg'
 import DrDetailBox from "./DrDetailBox"
 import { FaRegStar } from "react-icons/fa6";
 import DoctorName from "./DoctorName";

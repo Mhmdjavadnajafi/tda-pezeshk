@@ -1,10 +1,9 @@
 import { BsTelephone } from "react-icons/bs"
 import CmBox from "../components/cmBox"
-import DoctorName from "../components/DoctorName"
 import DrDetail from "../components/DrDetail"
 import DrInformationDoctorPage from "../components/DrNameDoctorPage"
 import TestHeader from "../components/HeaderTest"
-import { CiVideoOff, CiVideoOn } from "react-icons/ci"
+import { CiVideoOn } from "react-icons/ci"
 import { FiTrello } from "react-icons/fi"
 import BorderGeneral from "../components/BordergeneralTest"
 import MenuDrPage from "../components/MenuDrPage"
@@ -13,13 +12,24 @@ import Typeofconsultation from "../components/Typeofconsultation"
 import Comments from "../components/CommentsForDoctor"
 import RequestButton from '../components/RequestButton'
 import LoaderProvider from "./LoaderProvider"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
+
 const DoctorPage = () => {
-    const navigate = useNavigate('')
+    const navigate = useNavigate()
+    const location = useLocation()
+
+    const handleBack = () => {
+        if (location.state?.fromDoctors) {
+            navigate(-1); 
+        } else {
+            navigate(-1); 
+        }
+    }
+
     return (
         <LoaderProvider>
             <div>
-                <TestHeader title={"مشاوره پزشک"} onClick={() => navigate('/doctors')}></TestHeader>
+                <TestHeader title={"مشاوره پزشک"} onClick={handleBack} />
                 <DrDetail />
                 <DrInformationDoctorPage name={'دکتر مینا بیرانوند'} exp={"دکترای تخصصی روانشناسی و مشاوره"} />
                 <div className="w-[90%] mx-auto flex items-center justify-between gap-x-1">
@@ -35,10 +45,16 @@ const DoctorPage = () => {
                 <BorderGeneral />
                 <Typeofconsultation />
                 <BorderGeneral />
-                <Comments></Comments>
-                <RequestButton onClick={() => navigate('/doctorPayment')} text={'تکمیل سفارش'}></RequestButton>
+                <Comments />
+                <RequestButton
+                    bg={'bg-blue-500'}
+                    color={"text-white"}
+                    onClick={() => navigate('/doctorPayment')}
+                    text={'تکمیل سفارش'}
+                />
             </div>
         </LoaderProvider>
     )
 }
+
 export default DoctorPage

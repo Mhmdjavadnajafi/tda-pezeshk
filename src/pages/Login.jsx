@@ -6,7 +6,7 @@ import LoaderProvider from "./LoaderProvider";
 export default function LoginApp(){
     return(
       <LoaderProvider>
-            <div className="w-[90%] mt-10 mx-auto flex flex-col items-center">
+            <div className="w-[90%] mt-5 mx-auto flex flex-col items-center">
                 <LogoApp></LogoApp>
                 <LoginAppTitle></LoginAppTitle>
                 <LoginBox></LoginBox>

@@ -1,7 +1,7 @@
 import { IoIosArrowBack } from "react-icons/io";
 const TypeofconsultationBoxDisable = ({icon,name,description,visitPrice,isActive})=>{
     return(
-        <div className="w-full h-[130px] border border-gray-300 rounded-2xl flex flex-col justify-between py-2 shadow-xl mt-5">
+        <div className="w-full h-[130px] border border-gray-300 rounded-2xl flex flex-col justify-between py-2 mt-5">
             <div className="flex items-center justify-between w-[90%] mx-auto border-b border-gray-200 pb-4 relative">
                <div className="flex items-center gap-3">
                     <div className="text-2xl text-gray-300">{icon}</div>

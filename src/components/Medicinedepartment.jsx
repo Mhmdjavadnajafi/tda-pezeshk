@@ -2,9 +2,9 @@ import React from 'react'
 import Expertise from './expertise';
 import Rectangle from '../assets/images/Rectangle 5619.png'
 import Depatment from './deparment';
-import Drug_registration from '../assets/images/ثبت دارو.png'
-import With_prescription from '../assets/images/نسخه دارم.png'
-import No_prescription from '../assets/images/دارو بدون نسخه.png'
+import Drug_registration from '../assets/images/sabtdaro.png'
+import With_prescription from '../assets/images/Group 3937 (2).png'
+import No_prescription from '../assets/images/noskhenadaram.png'
 import { useNavigate } from 'react-router-dom';
 const Medicinedepartment = () => {
     const navigate = useNavigate()

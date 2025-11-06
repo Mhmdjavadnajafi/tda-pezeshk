@@ -5,7 +5,7 @@ import MenuCheckUp from './MenuCheckUp'
 import TestSelect from './TestSelect'
 import BorderGeneral from './BordergeneralTest'
 import TestDetail from './TestDetail'
-
+import { formatNumber } from '../utils/formatNumber';
 const CheckUp = () => (
     <div className="w-full mx-auto">
         <PackageTestTitle title={'پکیج چکاب عمومی'} />

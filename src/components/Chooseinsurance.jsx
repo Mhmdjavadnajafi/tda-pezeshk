@@ -11,13 +11,13 @@ const Chooseinsurance = () => {
     ]
 
     return (
-        <div className='w-full mx-auto mt-10'>
+        <div className='w-full mx-autu'>
             <CompleteTitle title={'انتخاب بیمه'} />
             <div className='w-[90%] mx-auto flex gap-2 items-stretch justify-evenly mt-3'>
                 {insuranceSelector.map((insurance) => (
                     <div
                         onClick={() => setActive(insurance.insuranceKey)}
-                        className={`text-sm text-[#898989] rounded-lg px-4 py-2 flex items-center justify-center whitespace-nowrap overflow-hidden text-ellipsis ${active === insurance.insuranceKey ? 'bg-blue-200' : 'bg-gray-200'} vazir-medium`}
+                        className={`text-sm text-[#898989] rounded-lg px-4 py-2 flex items-center justify-center whitespace-nowrap overflow-hidden text-ellipsis ${active === insurance.insuranceKey ? 'bg-blue-200 text-blue-700' : 'bg-gray-200'} vazir-medium`}
                         key={insurance.insuranceKey}
                     >
                         {insurance.insuranceName}

@@ -9,6 +9,7 @@ import DiseasesContainer from "../components/diseases";
 import TestSelector from "../components/TestSelector";
 import Navbar from "../layouts/Navbar";
 import LoaderProviderMotion from "../pages/LoaderProvider";
+import Ambulance from "../components/Ambulance";
 const Content = ()=>{
     return(
         <LoaderProviderMotion>
@@ -19,7 +20,7 @@ const Content = ()=>{
                 <Expertises />
                 <DoctorsBox />
                 <DiseasesContainer />
-                <TestSelector />
+                <Ambulance/>
                 <Navbar />
             </div>
         </LoaderProviderMotion>

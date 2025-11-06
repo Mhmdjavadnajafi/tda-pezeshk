@@ -21,9 +21,9 @@ const HeaderDiseases = () => {
           s248-111.043 248-248C504 119.083 392.957 8 256 8z"
                         />
                     </svg>
-                   بیماری ها
+                   مشاوره بیماری ها
                 </div>
-                <div className="vazir-medium text-gray-600 text-bold mt-1">بهترین های هر حوزه اینجا هستند!</div>
+                <div className="vazir-medium text-gray-600 text-bold mt-1">هدایت هوشمند به پزشک بر اساس بیماری انتخابی</div>
             </div>
         </div>
     )

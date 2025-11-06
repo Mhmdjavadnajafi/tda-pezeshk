@@ -2,7 +2,7 @@ import { useState } from "react";
 import ToggleSelect from "./ToggleSelect";
 
 const LocationofPain = () => {
-    const [active, setActive] = useState("");
+    const [active, setActive] = useState("forward"); 
 
     const location = [
         { id: "forward", text: "رو به جلو" },

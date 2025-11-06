@@ -1,27 +1,39 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import DoctorCard from "./DoctorCard";
+
 const DoctorsCard = () => {
+    const [isDragging, setIsDragging] = useState(false);
+    useEffect(()=>{
+        console.log(isDragging)
+    },[isDragging])
     return (
-        <div className="w-[100%] mx-auto mt-5">
+        <div className={`${isDragging ? 'w-full':"w-[90%]"} mx-auto mt-5`}>
             <Swiper
-                spaceBetween={16} 
-                slidesPerView={"auto"} 
-                grabCursor={true} 
+                spaceBetween={16}
+                slidesPerView={"auto"}
+                grabCursor={true}
+                onSliderMove={() => setIsDragging(true)}
+                onTransitionEnd={() => setIsDragging(false)}
+                onTouchEnd={() => setIsDragging(false)}
+                onMouseUp={() => setIsDragging(false)}
             >
-                <SwiperSlide className="!w-auto">
-                    <DoctorCard profileName={'الناز توکلی'} profileExp={'روانشناس'} />
-                </SwiperSlide>
-                <SwiperSlide className="!w-auto">
-                    <DoctorCard profileName={"مریم میرآخوری"} profileExp={'دکترای تخصصی روانشناسی و مشاوره'} />
-                </SwiperSlide>
-                <SwiperSlide className="!w-auto">
-                    <DoctorCard profileName={"مریم میرآخوری"} profileExp={"دکتری تخخصی"}  />
-                </SwiperSlide>
-                <SwiperSlide className="!w-auto">
-                    <DoctorCard profileName={"مریم میرآخوری"} profileExp={"قلب و عروق"} />
-                </SwiperSlide>
+                {[
+                    { name: "الناز توکلی", exp: "روانشناس" },
+                    { name: "مریم میرآخوری", exp: "دکترای تخصصی روانشناسی و مشاوره" },
+                    { name: "مریم میرآخوری", exp: "دکتری تخصصی" },
+                    { name: "مریم میرآخوری", exp: "قلب و عروق" },
+                ].map((doctor, index) => (
+                    <SwiperSlide key={index} className="!w-auto">
+                        <div
+                            className={`transition-transform duration-300 ${isDragging ? "scale-105" : "scale-100"
+                                }`}
+                        >
+                            <DoctorCard profileName={doctor.name} profileExp={doctor.exp} />
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

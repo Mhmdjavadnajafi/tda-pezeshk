@@ -5,7 +5,7 @@ import { CiMail } from "react-icons/ci";
 import CommunicationBoxVideo from "./CommunicationBoxVideo";
 const Communication = ()=>{
     return(
-        <div className="w-[90%] my-[1px] mx-auto h-[35px] grid grid-cols-11 gap-1">
+        <div className="w-[90%] my-[1px] mx-auto flex gap-1">
             <CommunicationBox icon={<BsTelephone />} title={'تلفنی'}></CommunicationBox>
             <CommunicationBox icon={<CiMail/>} title={'متنی'}></CommunicationBox>
             <CommunicationBoxVideo icon={<CiMail />} title={'تصویری'}></CommunicationBoxVideo>

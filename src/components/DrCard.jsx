@@ -1,5 +1,5 @@
 import RadarCircle from "./Radar";
-import DoctorOne from '../assets/images/پزشک زن.jpg'
+import DoctorOne from '../assets/images/womandr.jpg'
 import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import StarBox from "./StarBox";
@@ -40,7 +40,7 @@ const DrCard = ({ profileImg, profileName, profileExp,onClick }) => {
                     </div>
                 </div>
             </div>
-            <div className="w-[90%] max-w-[500px] mx-auto flex justify-between mt-5 gap-2">
+            <div className="w-[90%] max-w-[500px] flex-wrap mx-auto flex mt-5 gap-1 justify-center">
                 <CmBox icon={<BsTelephone />} text={"اورژانسی"} />
                 <CmBox icon={<BsTelephone />} text={"تلفنی"} />
                 <CmBox icon={<BsTelephone />} text={"متنی"} />

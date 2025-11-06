@@ -34,7 +34,7 @@ const MenuDrPage = () => {
                     key={item.id}
                     ref={(el) => (itemRefs.current[item.id] = el)}
                     onClick={() => handleClick(item.id)}
-                    className={`px-4 vazir-medium py-2 cursor-pointer ${activeItem === item.id ? 'text-blue-500' : 'text-gray-400'
+                    className={`px-4 text-sm vazir-medium py-2 cursor-pointer ${activeItem === item.id ? 'text-blue-500' : 'text-gray-400'
                         }`}
                 >
                     {item.title}

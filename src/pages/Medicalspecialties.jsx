@@ -12,7 +12,7 @@ const Medicalspecialties = () => {
     return (
         <LoaderProvider>
             <div className="w-full h-full mx-auto relative">
-                <TestHeader title={"تخصص ها"} onClick={()=>navigate('/content')}></TestHeader>
+                <TestHeader title={"تخصص ها"} onClick={()=>navigate('/')}></TestHeader>
                 <SearchBoxMedical />
                 <ExpertisesMedicalContainer />
                 <DoctorsContainer />

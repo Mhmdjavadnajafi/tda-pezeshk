@@ -17,7 +17,7 @@ const PaymentDrug = () => {
                 <CompleteTitle title={"خلاصه سفارش"} />
                 {/* <Ordersummary /> */}
                 <BorderGeneral />
-                <RequestButton text={'انتقال به درگاه'} />
+                <RequestButton bg={'bg-blue-500'} color={'text-white'} text={'انتقال به درگاه'} />
                 <CompleteTitle title={'صورت حساب'} />
                 <div className="w-[90%] mx-auto my-3">
                     <InputNumber placeholder={'کد تخفیف'} />

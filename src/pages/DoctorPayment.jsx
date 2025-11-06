@@ -23,7 +23,7 @@ const DoctorPayment = ()=>{
                     <div className="vazir-medium text-gray-500 text-[15px] mt-2 mb-7">ویزیت پزشک برای مشاوره تلفنی فوری 216.000 تومان</div>
                     <div className="vazir-medium text-gray-500 text-[15px] mb-30">قابل پرداخت 25.000.000 تومان</div>
                 </div>
-                <RequestButton text={'انتقال به درگاه'}></RequestButton>
+                <RequestButton bg={'bg-blue-500'} color={'text-white'} text={'انتقال به درگاه'}></RequestButton>
             </div>
         </LoaderProvider>
     )
